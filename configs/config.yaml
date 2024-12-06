@@ -1,0 +1,16 @@
+# configs/config.yaml
+
+data:
+  images_dir: 'data/images'
+  metadata_dir: 'data/metadata'
+  batch_size: 8
+
+model:
+  encoder_weights_path: 'path/to/pretrained_weights.pth'
+  num_classes: 80
+  learning_rate: 1e-3
+
+training:
+  max_epochs: 20
+  gpus: 1
+  save_checkpoint: 'checkpoints/final_model.ckpt'
