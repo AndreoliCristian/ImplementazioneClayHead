@@ -1,5 +1,9 @@
 # datasets/datamodule.py
 
+import sys
+
+sys.path.append('..')
+
 import os
 import torch
 from torch.utils.data import DataLoader, random_split
