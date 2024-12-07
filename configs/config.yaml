@@ -13,7 +13,7 @@ model:
   shuffle: True
   # ENCODER
   #model_size: base
-  encoder_weights_path: 'encoder_weights_v1.0.pt'
+  encoder_weights_path: 'checkpoints/encoder_weights_v1.0.pt'
   "dim": 768
   "depth": 12
   "heads": 12
