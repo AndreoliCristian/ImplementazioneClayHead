@@ -1,16 +1,26 @@
 # configs/config.yaml
-
+seed_everything: 42
 data:
   images_dir: 'data/images'
   metadata_dir: 'data/metadata'
+  annotations_dir: 'data/annotations'
   batch_size: 8
-
+  num_workers: 4
+  val_split: 0.2
 model:
-  encoder_weights_path: 'path/to/pretrained_weights.pth'
-  num_classes: 80
-  learning_rate: 1e-3
-
-training:
+  mask_ratio: 0.75
+  patch_size: 8
+  shuffle: True
+  # ENCODER
+  #model_size: base
+  encoder_weights_path: 'encoder_weights_v1.0.pt'
+  "dim": 768
+  "depth": 12
+  "heads": 12
+  "dim_head": 64
+  "mlp_ratio": 4
+trainer:
   max_epochs: 20
   gpus: 1
+ckpt_path:
   save_checkpoint: 'checkpoints/final_model.ckpt'
