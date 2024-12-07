@@ -4,7 +4,7 @@ data:
   images_dir: 'data/images'
   metadata_dir: 'data/metadata'
   annotations_dir: 'data/annotations'
-  batch_size: 8
+  batch_size: 1
   num_workers: 4
   val_split: 0.2
 model:

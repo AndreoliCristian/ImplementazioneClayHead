@@ -9,14 +9,14 @@ def main():
     with open("configs/config.yaml", "r") as file:
         config = yaml.safe_load(file)
 
-    datamodule = ObjectDetectionDataModule(
+    '''datamodule = ObjectDetectionDataModule(
         images_dir=config["data"]["images_dir"],
         metadata_dir=config["data"]["metadata_dir"],
         annotation_dir=config["data"]["annotation_dir"],
         batch_size=config["data"]["batch_size"],
         num_workers=config["data"]["num_workers"],
         val_split=config["data"]["val_split"]
-    )
+    )'''
 
     encoder = Encoder(
         mask_ratio=config["model"]["mask_ratio"],
