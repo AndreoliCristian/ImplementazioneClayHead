@@ -33,6 +33,8 @@ def main():
     encoder_weights = torch.load(config["model"]["encoder_weights_path"])
     encoder.load_state_dict(encoder_weights)
 
+    # Initialize the datamodule
+    datamodule.setup()
     # Iterate over the datamodule
     for batch in datamodule.train_dataloader():
         print(type(batch))
