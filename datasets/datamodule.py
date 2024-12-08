@@ -1,15 +1,11 @@
 # datasets/datamodule.py
 
-import sys
-
-sys.path.append('..')
-
 import os
 import torch
 from torch.utils.data import DataLoader, random_split
 import pytorch_lightning as pl
 from torchvision import transforms
-from datasets.dataloader import ObjectDetectionDataset
+from datasets.dataLoader import ObjectDetectionDataset
 
 class ObjectDetectionDataModule(pl.LightningDataModule):
     def __init__(self, images_dir: str, metadata_dir: str, annotation_dir: str, batch_size=8, num_workers=4, val_split=0.2):
