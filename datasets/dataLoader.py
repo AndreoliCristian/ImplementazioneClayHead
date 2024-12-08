@@ -70,8 +70,8 @@ class ObjectDetectionDataset(Dataset):
         root = tree.getroot()
 
         # Read metadata from the XML
-        tree = ET.parse(self.metadata_dir)
-        root = tree.getroot()
+        #tree = ET.parse(self.metadata_dir)
+        #root = tree.getroot()
         lat = float(root.findtext('.//LAT_OFF'))
         lon = float(root.findtext('.//LON_OFF'))
         time = root.findtext('.//time')
