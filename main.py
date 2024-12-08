@@ -37,8 +37,8 @@ def main():
     datamodule.setup()
     # Iterate over the datamodule
     for batch in datamodule.train_dataloader():
-        print(type(batch))
-        print(batch.shape)
+        print(type(batch)) # <class 'tuple'>
+        print(type(batch[0]))
         #print(batch)
 
 

@@ -49,6 +49,9 @@ class ObjectDetectionDataset(Dataset):
         annotation_path = os.path.join(self.annotation_dir, annotation_file)
         # open the annotation file
         annotation = np.loadtxt(annotation_path, dtype=np.float32) # [num_objects, 5]
+        # add a dummy dimension if there is only one object
+        if annotation.ndim == 1:
+            annotation = np.expand_dims(annotation, axis=0)
         # create a dictionary with the annotation
         targets = {'boxes': torch.tensor(annotation[:, 1:], dtype=torch.float32),
                    'labels': torch.tensor(annotation[:, 0], dtype=torch.int64)}
