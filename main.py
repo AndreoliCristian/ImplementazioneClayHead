@@ -38,8 +38,13 @@ def main():
     # Iterate over the datamodule
     for batch in datamodule.train_dataloader():
         print(type(batch)) # <class 'tuple'>
+        print(batch.length)
         print(type(batch[0]))
+        print(batch[0].length)
+        print(type(batch[0][0]))
+        print(batch[0][0].length)
         #print(batch)
+        break
 
 
 if __name__ == '__main__':
