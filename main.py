@@ -38,11 +38,11 @@ def main():
     # Iterate over the datamodule
     for batch in datamodule.train_dataloader():
         print(type(batch)) # <class 'tuple'>
-        print(batch.length)
+        print(len(batch))
         print(type(batch[0]))
-        print(batch[0].length)
+        print(len(batch[0]))
         print(type(batch[0][0]))
-        print(batch[0][0].length)
+        print(len(batch[0][0]))
         #print(batch)
         break
 
